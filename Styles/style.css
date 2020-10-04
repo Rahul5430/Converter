@@ -68,12 +68,20 @@ table.calc td {
 }
 @media (max-width: 750px) {
     html {
-        font-size: 56.25%;
+        font-size: 80%;
+    }
+    .calc {
+        width: 80%;
+        height: 600px;
     }
 }
 @media (max-width: 675px) {
     html {
-        font-size: 50%;
+        font-size: 65%;
+    }
+    .calc {
+        width: 80%;
+        height: 400px;
     }
 }
 @media (min-width: 1300px) {
