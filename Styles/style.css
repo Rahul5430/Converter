@@ -88,4 +88,7 @@ table.calc td {
     html {
         font-size: 80%;
     }
+    .calc {
+        width: 25%;
+    }
 }
