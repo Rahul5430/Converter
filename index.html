@@ -43,6 +43,74 @@
                     </select>
                 </div>
             </div>
+            <form name="calc-form" autocomplete="off">
+                <table class="calc">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <label for="x">Enter Decimal Number : </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="text" inputmode="numeric" id="x" name="x" class="form-control form-control-lg" required autofocus tabindex="1">
+                            </td>
+                            <td class="mathsymbol">
+                                <sub>10</sub>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="button" title="Convert" class="btn btn-primary" tabindex="2" onclick="convert()">
+                                    <img src="Images/Convert.png" alt="Convert">
+                                    Convert
+                                </button>
+                                <button type="reset" title="Reset" class="btn btn-secondary" tabindex="3" onclick="convert()">
+                                    <img src="Images/Reset.png" alt="Reset">
+                                    Reset
+                                </button>
+                                <button type="button" title="Swap Conversion" class="btn btn-secondary" tabindex="4" onclick="">
+                                    <img src="Images/Swap.png" alt="Swap">
+                                    Swap
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> Binary Number : </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="y" rows="2" class="form-control form-control-lg" readonly tabindex="5"></textarea>
+                            </td>
+                            <td class="mathsymbol">
+                                <sub>2</sub>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> Octal Number : </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="y2" rows="2" class="form-control form-control-lg" readonly tabindex="6"></textarea>
+                            </td>
+                            <td class="mathsymbol">
+                                <sub>8</sub>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Hexadecimal Number : </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="y5" rows="2" class="form-control form-control-lg" readonly tabindex="7"></textarea>
+                            </td>
+                            <td class="mathsymbol">
+                                <sub>16</sub>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
         </main>
     </body>
 </html>

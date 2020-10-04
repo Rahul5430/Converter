@@ -7,13 +7,15 @@
 body {
     margin: 0;
     padding: 0;
-    background: #d2d2d2;
+    background: #0B132B;
+    color: #fff;
+    font-size: 1.8rem;
 }
 h1 {
     text-align: center;
-    font-weight: bold;
     margin: 40px auto 40px auto;
-    font-size: 3rem !important;
+    font-size: 4.5rem !important;
+    text-shadow: 0.5rem 0.3rem 0.2rem #303F9F;
 }
 #logo {
     padding: 10px;
@@ -23,10 +25,59 @@ h1 {
 label {
     display: inline-block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+}
+.calc {
+    margin: auto;
+    padding: 20px;
+    background: #1e2864;
+    color: #fff;
+    text-shadow: 0.5rem 0.3rem 0.2rem #303F9F;
+    border-spacing: 0;
+    border-collapse: separate;
+    border: 1px #ddd solid;
+    border-radius: 7px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+table.calc td {
+    padding: 2px;
+    border-width: 0px;
+    border-style: none;
+}
+.calc button {
+    margin: 10px auto;
+}
+.calc button img {
+    filter: brightness(0) invert(1);
+}
+.mathsymbol {
+    font-size: 1.2em;
+    font-weight: normal;
 }
 @media screen and (max-width: 400px) {
     h1 {
         margin: auto;
+    }
+}
+@media (max-width: 750px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+@media (max-width: 675px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media (min-width: 1300px) {
+    html {
+        font-size: 80%;
     }
 }
