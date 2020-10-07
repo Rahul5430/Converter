@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="Styles/style.css">
         <link rel="icon" href="Images/r-circle-logo.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -23,94 +24,64 @@
             </div>
         </header>
         <main>
-            <div id="unitnav" class="form-row mb-2" style="max-width: 476px; margin: auto;">
-                <div class="form-group col">
-                    <label for="unit1">From</label>
-                    <select class="form-control" id="unit1">
-                        <option disabled>Binary</option>
-                        <option selected>Decimal</option>
-                        <option disabled>Octal</option>
-                        <option disabled>Hexadecimal</option>
-                    </select>
-                </div>
-                <div class="form-group col">
-                    <label for="unit2">To</label>
-                    <select class="form-control" id="unit2">
-                        <option selected>Binary</option>
-                        <option disabled>Decimal</option>
-                        <option>Octal</option>
-                        <option>Hexadecimal</option>
-                    </select>
-                </div>
-            </div>
-            <form name="calc-form" autocomplete="off">
-                <table class="calc">
-                    <tbody>
-                        <tr>
-                            <td colspan="2">
-                                <label for="x">Enter Decimal Number : </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            <input type="text" inputmode="numeric" id="x" name="x" class="form-control form-control-lg" required autofocus tabindex="1">
-                            </td>
-                            <td class="mathsymbol">
-                                <sub>10</sub>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <button type="button" title="Convert" class="btn btn-primary" tabindex="2" onclick="convert()">
-                                    <img src="Images/Convert.png" alt="Convert">
-                                    Convert
-                                </button>
-                                <button type="reset" title="Reset" class="btn btn-secondary" tabindex="3" onclick="convert()">
-                                    <img src="Images/Reset.png" alt="Reset">
-                                    Reset
-                                </button>
-                                <button type="button" title="Swap Conversion" class="btn btn-secondary" tabindex="4" onclick="">
-                                    <img src="Images/Swap.png" alt="Swap">
-                                    Swap
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"> Binary Number : </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="y" rows="2" class="form-control form-control-lg" readonly tabindex="5"></textarea>
-                            </td>
-                            <td class="mathsymbol">
-                                <sub>2</sub>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"> Octal Number : </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="y2" rows="2" class="form-control form-control-lg" readonly tabindex="6"></textarea>
-                            </td>
-                            <td class="mathsymbol">
-                                <sub>8</sub>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Hexadecimal Number : </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea id="y5" rows="2" class="form-control form-control-lg" readonly tabindex="7"></textarea>
-                            </td>
-                            <td class="mathsymbol">
-                                <sub>16</sub>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
+            <p>Hi There! Just type a number and it will be converted to other bases automatically</p>
+            <table class="calc">
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <label for="x">Decimal Number : </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="text" oninput="convert('dec', 10)" inputmode="numeric" id="dec" name="dec" class="form-control form-control-lg" required autofocus tabindex="1">
+                        </td>
+                        <td class="mathsymbol">
+                            <sub>10</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="x">Binary Number : </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="text" oninput="convert('bin', 2)" inputmode="numeric" id="bin" name="bin" class="form-control form-control-lg" required autofocus tabindex="1">
+                        </td>
+                        <td class="mathsymbol">
+                            <sub>2</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="x">Octal Number : </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="text" oninput="convert('oct', 8)" inputmode="numeric" id="oct" name="oct" class="form-control form-control-lg" required autofocus tabindex="1">
+                        </td>
+                        <td class="mathsymbol">
+                            <sub>8</sub>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="x">HexaDecimal Number : </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <input type="text" oninput="convert('hex', 16)" inputmode="numeric" id="hex" name="hex" class="form-control form-control-lg" required autofocus tabindex="1">
+                        </td>
+                        <td class="mathsymbol">
+                            <sub>16</sub>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </main>
+        <script src="Scripts/script.js"></script>
     </body>
 </html>

@@ -11,11 +11,16 @@ body {
     color: #fff;
     font-size: 1.8rem;
 }
-h1 {
+h1, p {
     text-align: center;
     margin: 40px auto 40px auto;
-    font-size: 4.5rem !important;
     text-shadow: 0.5rem 0.3rem 0.2rem #303F9F;
+}
+h1 {
+    font-size: 4.5rem !important;
+}
+p {
+    font-size: 3rem;
 }
 #logo {
     padding: 10px;
@@ -62,7 +67,7 @@ table.calc td {
     font-weight: normal;
 }
 @media screen and (max-width: 400px) {
-    h1 {
+    h1, p {
         margin: auto;
     }
 }
@@ -82,6 +87,12 @@ table.calc td {
     .calc {
         width: 80%;
         height: 400px;
+    }
+    p {
+        font-size: 2rem;
+        text-align: center;
+        margin: 40px auto 40px auto;
+        text-shadow: 0.5rem 0.3rem 0.2rem #303F9F;
     }
 }
 @media (min-width: 1300px) {
